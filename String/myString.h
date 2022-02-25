@@ -24,7 +24,8 @@ public:
         print << obj._m_buffer;
         return print;
     };
-    const char operator[] (int) const;
+    const char& operator[] (const int) const;
+    char& operator[] (const int);
     bool operator == (const MyString&) const;
     const int get_length() const {return _m_size;};
     void push_back (const char);
