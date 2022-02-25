@@ -50,8 +50,13 @@ MyString& MyString::operator = (MyString&& rhs) {
     return *this;
 };
 
-const char MyString::operator[] (int index) const {
-    return this->_m_buffer[index];
+const char& MyString::operator[] (const int index) const {
+    if(index >= 0 && index < this->_m_size)
+        return this->_m_buffer[index];
+};
+
+char& MyString::operator[] (const int index) {
+    return const_cast < char& > (static_cast < const MyString& > (*this)[index]);
 };
 
 bool MyString::operator == (const MyString& other) const {
