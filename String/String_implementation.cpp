@@ -1,4 +1,4 @@
-#include "myString.h"
+#include "MyString.h"
 
 MyString::MyString () : _m_buffer {new char[1]} , _m_size {} {
     _m_buffer[0] = '\0';
