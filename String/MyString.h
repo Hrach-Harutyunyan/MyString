@@ -1,7 +1,6 @@
 #include <iostream>
 
-class MyString
-{
+class MyString {
 public:
     MyString ();
     explicit MyString (const char*);
