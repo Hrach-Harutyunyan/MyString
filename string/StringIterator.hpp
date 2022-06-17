@@ -30,7 +30,10 @@ public:
     StringIterator operator -- (int);
     StringIterator& operator += (int);
     StringIterator& operator -= (int);
-    bool operator < (const StringIterator&);
+    bool operator < (const StringIterator&) const;
+    bool operator > (const StringIterator&) const;
+    bool operator >= (const StringIterator&) const;
+    bool operator <= (const StringIterator&) const;
     typename StringIterator::difference_type operator - (const StringIterator&);
     void swap(StringIterator&);
 
