@@ -72,8 +72,20 @@ typename StringIterator::difference_type StringIterator::operator - (const Strin
     return  this->_m_index - other._m_index;
 };
 
-bool StringIterator::operator < (const StringIterator& other) {
+bool StringIterator::operator < (const StringIterator& other) const {
     return this->_m_index < other._m_index;
+};
+
+bool StringIterator::operator > (const StringIterator& other) const {
+    return this->_m_index > other._m_index;
+};
+
+bool StringIterator::operator >= (const StringIterator& other) const {
+    return this->_m_index >= other._m_index;
+};
+
+bool StringIterator::operator <= (const StringIterator& other) const {
+    return this->_m_index <= other._m_index;
 };
 
 void StringIterator::swap(StringIterator& b) {
