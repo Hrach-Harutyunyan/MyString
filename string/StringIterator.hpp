@@ -36,13 +36,10 @@ public:
     bool operator <= (const StringIterator&) const;
     typename StringIterator::difference_type operator - (const StringIterator&);
     void swap(StringIterator&);
-
-    
+ 
 private:
     friend class String;
     friend std::ostream& operator << (std::ostream& print, const StringIterator&);
-
-
 
 private:
     std::size_t _m_index {};
@@ -51,6 +48,5 @@ private:
 
 #include "String.hpp"
 #include "IteratorImplementation.hpp"
-
 
 #endif
